@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav.xml"
+    app:startDestination="@id/generatePasswordFragment">
+
+    <fragment
+        android:id="@+id/generatePasswordFragment"
+        android:name="com.github.aayman93.passwordy.features.generate_password.presentation.screens.GeneratePasswordFragment"
+        android:label="GeneratePasswordFragment"
+        tools:layout="@layout/fragment_generate_password" >
+        <action
+            android:id="@+id/action_generatePasswordFragment_to_savePasswordFragment"
+            app:destination="@id/savePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savePasswordFragment"
+        android:name="com.github.aayman93.passwordy.features.save_password.presentation.screens.SavePasswordFragment"
+        android:label="SavePasswordFragment"
+        tools:layout="@layout/fragment_save_password" />
+</navigation>
