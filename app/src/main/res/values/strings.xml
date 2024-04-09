@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Passwordy</string>
+    <string name="generate_password">Generate Password</string>
+    <string name="password_length">Password length</string>
+    <string name="lowercase_letters_a_z">Lowercase letters (a&#8211;z)</string>
+    <string name="uppercase_letters_a_z">Uppercase letters (A&#8211;Z)</string>
+    <string name="digits_0_9">Digits (0&#8211;9)</string>
+    <string name="special_characters"><![CDATA[Special characters (@!$%#&)]]></string>
+    <string name="generate">Generate</string>
 </resources>
