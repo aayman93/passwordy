@@ -4,7 +4,8 @@ plugins {
     alias(libs.plugins.navigationSafeArgs)
     alias(libs.plugins.daggerHilt)
     alias(libs.plugins.ksp)
-    id("kotlin-kapt")
+    alias(libs.plugins.kapt)
+    alias(libs.plugins.parcelize)
 }
 
 android {
