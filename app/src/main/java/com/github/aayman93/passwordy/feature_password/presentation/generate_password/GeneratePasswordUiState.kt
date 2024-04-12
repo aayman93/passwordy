@@ -3,10 +3,10 @@ package com.github.aayman93.passwordy.feature_password.presentation.generate_pas
 import kotlinx.coroutines.flow.MutableStateFlow
 
 data class GeneratePasswordUiState(
-    var password: MutableStateFlow<String> = MutableStateFlow(""),
-    var passwordLength: MutableStateFlow<Int> = MutableStateFlow(8),
-    var includeLowercase: MutableStateFlow<Boolean> = MutableStateFlow(true),
-    var includeUppercase: MutableStateFlow<Boolean> = MutableStateFlow(false),
-    var includeDigits: MutableStateFlow<Boolean> = MutableStateFlow(false),
-    var includeSpecialCharacters: MutableStateFlow<Boolean> = MutableStateFlow(false)
+    val password: MutableStateFlow<String> = MutableStateFlow(""),
+    val passwordLength: MutableStateFlow<Int> = MutableStateFlow(8),
+    val includeLowercase: MutableStateFlow<Boolean> = MutableStateFlow(true),
+    val includeUppercase: MutableStateFlow<Boolean> = MutableStateFlow(false),
+    val includeDigits: MutableStateFlow<Boolean> = MutableStateFlow(false),
+    val includeSpecialCharacters: MutableStateFlow<Boolean> = MutableStateFlow(false)
 )

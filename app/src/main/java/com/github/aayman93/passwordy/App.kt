@@ -1,4 +1,4 @@
-package com.github.aayman93.passwordy.di
+package com.github.aayman93.passwordy
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

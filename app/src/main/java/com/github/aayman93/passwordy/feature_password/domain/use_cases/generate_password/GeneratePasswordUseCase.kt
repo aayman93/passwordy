@@ -1,10 +1,12 @@
-package com.github.aayman93.passwordy.feature_password.domain.use_cases
+package com.github.aayman93.passwordy.feature_password.domain.use_cases.generate_password
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
+import javax.inject.Singleton
 import kotlin.random.Random
 
+@Singleton
 class GeneratePasswordUseCase @Inject constructor() {
 
     private val lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
