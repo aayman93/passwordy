@@ -30,9 +30,9 @@ class SavePasswordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val passwordAction = args.passwordAction
-        binding.password.text = when (passwordAction) {
-            is PasswordAction.SavePassword -> passwordAction.data
-            else -> "Add Password"
+
+        if (passwordAction is PasswordAction.SavePassword) {
+            binding.passwordField.setText(passwordAction.data)
         }
     }
 

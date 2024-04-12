@@ -7,4 +7,11 @@
     <string name="digits_0_9">Digits (0&#8211;9)</string>
     <string name="special_characters"><![CDATA[Special characters (@!$%#&)]]></string>
     <string name="generate">Generate</string>
+    <string name="save_password">Save Password</string>
+    <string name="copy_password_to_clipboard">Copy password to clipboard</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="website_application">Website/Application</string>
+    <string name="password">Password</string>
+    <string name="save">Save</string>
 </resources>
