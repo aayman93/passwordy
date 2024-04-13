@@ -15,4 +15,9 @@
     <string name="password">Password</string>
     <string name="save">Save</string>
     <string name="phone">Phone</string>
+    <string name="continue_">Continue</string>
+    <string name="biometric_auth_title">Authenticate</string>
+    <string name="biometric_auth_description">Confirm your identity to continue</string>
+    <string name="biometric_auth_message">To access your saved passwords you need to confirm your identity</string>
+    <string name="saved_passwords">Saved passwords</string>
 </resources>

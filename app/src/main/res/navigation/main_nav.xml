@@ -9,7 +9,7 @@
         android:id="@+id/generatePasswordFragment"
         android:name="com.github.aayman93.passwordy.feature_password.presentation.generate_password.GeneratePasswordFragment"
         android:label="GeneratePasswordFragment"
-        tools:layout="@layout/fragment_generate_password" >
+        tools:layout="@layout/fragment_generate_password">
         <action
             android:id="@+id/action_generatePasswordFragment_to_savePasswordFragment"
             app:destination="@id/savePasswordFragment" />
@@ -18,9 +18,23 @@
         android:id="@+id/savePasswordFragment"
         android:name="com.github.aayman93.passwordy.feature_password.presentation.save_password.SavePasswordFragment"
         android:label="SavePasswordFragment"
-        tools:layout="@layout/fragment_save_password" >
+        tools:layout="@layout/fragment_save_password">
         <argument
             android:name="password_action"
             app:argType="com.github.aayman93.passwordy.feature_password.presentation.utils.PasswordAction" />
     </fragment>
+    <fragment
+        android:id="@+id/biometricAuthenticationFragment"
+        android:name="com.github.aayman93.passwordy.feature_password.presentation.biometric_authentication.BiometricAuthenticationFragment"
+        android:label="BiometricAuthenticationFragment"
+        tools:layout="@layout/fragment_biometric_authentication">
+        <action
+            android:id="@+id/action_biometricAuthenticationFragment_to_passwordsFragment"
+            app:destination="@id/passwordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordsFragment"
+        android:name="com.github.aayman93.passwordy.feature_password.presentation.passwords.PasswordsFragment"
+        android:label="PasswordsFragment"
+        tools:layout="@layout/fragment_passwords" />
 </navigation>
