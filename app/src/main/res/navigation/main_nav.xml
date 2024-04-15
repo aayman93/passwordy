@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav.xml"
-    app:startDestination="@id/generatePasswordFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/generatePasswordFragment"
@@ -30,11 +30,27 @@
         tools:layout="@layout/fragment_biometric_authentication">
         <action
             android:id="@+id/action_biometricAuthenticationFragment_to_passwordsFragment"
-            app:destination="@id/passwordsFragment" />
+            app:destination="@id/passwordsFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/passwordsFragment"
         android:name="com.github.aayman93.passwordy.feature_password.presentation.passwords.PasswordsFragment"
         android:label="PasswordsFragment"
         tools:layout="@layout/fragment_passwords" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.github.aayman93.passwordy.feature_password.presentation.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_generatePasswordFragment"
+            app:destination="@id/generatePasswordFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_savePasswordFragment"
+            app:destination="@id/savePasswordFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_biometricAuthenticationFragment"
+            app:destination="@id/biometricAuthenticationFragment" />
+    </fragment>
 </navigation>

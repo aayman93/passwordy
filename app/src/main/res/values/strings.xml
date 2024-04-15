@@ -19,5 +19,6 @@
     <string name="biometric_auth_title">Authenticate</string>
     <string name="biometric_auth_description">Confirm your identity to continue</string>
     <string name="biometric_auth_message">To access your saved passwords you need to confirm your identity</string>
-    <string name="saved_passwords">Saved passwords</string>
+    <string name="saved_passwords">Saved Passwords</string>
+    <string name="add_password">Add Password</string>
 </resources>

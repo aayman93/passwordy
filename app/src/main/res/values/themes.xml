@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Passwordy" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -35,6 +35,8 @@
         <item name="android:background">@drawable/background_main_button</item>
         <item name="android:elevation">4dp</item>
         <item name="android:foreground">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="textAllCaps">false</item>
         <item name="backgroundTint">@null</item>
     </style>
 </resources>
