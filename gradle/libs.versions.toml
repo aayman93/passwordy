@@ -16,6 +16,7 @@ ksp = "1.9.22-1.0.16"
 lifecycle = "2.7.0"
 room = "2.6.1"
 biometric = "1.1.0"
+splash = "1.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +36,7 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 biometric = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
