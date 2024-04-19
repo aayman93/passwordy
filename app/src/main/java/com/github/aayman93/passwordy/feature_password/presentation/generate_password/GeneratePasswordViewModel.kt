@@ -2,7 +2,7 @@ package com.github.aayman93.passwordy.feature_password.presentation.generate_pas
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.github.aayman93.passwordy.feature_password.domain.use_cases.generate_password.CopyToClipboardUseCase
+import com.github.aayman93.passwordy.feature_password.domain.use_cases.copy_password.CopyToClipboardUseCase
 import com.github.aayman93.passwordy.feature_password.domain.use_cases.generate_password.GeneratePasswordUseCase
 import com.github.aayman93.passwordy.feature_password.presentation.utils.PasswordAction
 import com.github.aayman93.passwordy.utils.OnSliderValueChangeListener

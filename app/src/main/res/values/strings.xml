@@ -21,4 +21,5 @@
     <string name="biometric_auth_message">To access your saved passwords you need to confirm your identity</string>
     <string name="saved_passwords">Saved Passwords</string>
     <string name="add_password">Add Password</string>
+    <string name="passwords_empty_state_text">You don\'t have any saved passwords!</string>
 </resources>

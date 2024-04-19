@@ -1,4 +1,4 @@
-package com.github.aayman93.passwordy.feature_password.domain.use_cases.generate_password
+package com.github.aayman93.passwordy.feature_password.domain.use_cases.copy_password
 
 import android.content.ClipData
 import android.content.ClipboardManager
