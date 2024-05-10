@@ -22,4 +22,6 @@
     <string name="saved_passwords">Saved Passwords</string>
     <string name="add_password">Add Password</string>
     <string name="passwords_empty_state_text">You don\'t have any saved passwords!</string>
+    <string name="delete_password">Delete password</string>
+    <string name="edit_password">Edit Password</string>
 </resources>

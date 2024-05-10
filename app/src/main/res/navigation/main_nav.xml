@@ -37,7 +37,11 @@
         android:id="@+id/passwordsFragment"
         android:name="com.github.aayman93.passwordy.feature_password.presentation.passwords.PasswordsFragment"
         android:label="PasswordsFragment"
-        tools:layout="@layout/fragment_passwords" />
+        tools:layout="@layout/fragment_passwords" >
+        <action
+            android:id="@+id/action_passwordsFragment_to_savePasswordFragment"
+            app:destination="@id/savePasswordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.github.aayman93.passwordy.feature_password.presentation.home.HomeFragment"

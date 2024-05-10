@@ -35,6 +35,18 @@ class SavePasswordViewModel @Inject constructor(
                     password = MutableStateFlow(passwordAction.data)
                 )
             }
+
+            is PasswordAction.EditPassword -> {
+                _state.value = _state.value.copy(
+                    email = MutableStateFlow(passwordAction.data.email),
+                    username = MutableStateFlow(passwordAction.data.username),
+                    phone = MutableStateFlow(passwordAction.data.phone),
+                    website = MutableStateFlow(passwordAction.data.website),
+                    password = MutableStateFlow(passwordAction.data.password),
+                    id = passwordAction.data.id
+                )
+            }
+
             PasswordAction.AddPassword -> Unit
         }
     }

@@ -9,7 +9,9 @@ import com.github.aayman93.passwordy.databinding.ItemPasswordBinding
 import com.github.aayman93.passwordy.feature_password.domain.models.PasswordInfo
 
 class PasswordsAdapter(
-    private val onCopyButtonClickListener: (String) -> Unit
+    private val onCopyButtonClickListener: (String) -> Unit,
+    private val onDeleteButtonClickListener: (PasswordInfo) -> Unit,
+    private val onItemClickListener: (PasswordInfo) -> Unit
 ) : ListAdapter<PasswordInfo, PasswordsAdapter.ViewHolder>(Differ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,6 +36,18 @@ class PasswordsAdapter(
                 val item = getItem(adapterPosition)
                 item?.let {
                     onCopyButtonClickListener.invoke(it.password)
+                }
+            }
+            binding.deleteButton.setOnClickListener {
+                val item = getItem(adapterPosition)
+                item?.let {
+                    onDeleteButtonClickListener.invoke(it)
+                }
+            }
+            binding.root.setOnClickListener {
+                val item = getItem(adapterPosition)
+                item?.let {
+                    onItemClickListener.invoke(it)
                 }
             }
         }

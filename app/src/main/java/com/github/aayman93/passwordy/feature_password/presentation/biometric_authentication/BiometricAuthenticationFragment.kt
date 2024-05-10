@@ -71,9 +71,7 @@ class BiometricAuthenticationFragment : Fragment() {
                             showToast(it.error)
                         }
 
-                        is BiometricPromptManager.BiometricResult.AuthenticationFailed -> {
-                            showToast("Authentication failed")
-                        }
+                        is BiometricPromptManager.BiometricResult.AuthenticationFailed -> Unit
 
                         is BiometricPromptManager.BiometricResult.AuthenticationNotSet -> {
                             showToast("Authentication not set")
@@ -90,8 +88,6 @@ class BiometricAuthenticationFragment : Fragment() {
                         }
 
                         is BiometricPromptManager.BiometricResult.AuthenticationSuccess -> {
-                            showToast("Authentication success")
-
                             findNavController().navigate(
                                 BiometricAuthenticationFragmentDirections
                                     .actionBiometricAuthenticationFragmentToPasswordsFragment()

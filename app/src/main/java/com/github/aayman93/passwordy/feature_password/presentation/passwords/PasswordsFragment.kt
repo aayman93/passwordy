@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.github.aayman93.passwordy.databinding.FragmentPasswordsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -42,9 +43,17 @@ class PasswordsFragment : Fragment() {
     }
 
     private fun setupRecycler() {
-        passwordsAdapter = PasswordsAdapter {
-            viewModel.onCopyButtonClicked(it)
-        }
+        passwordsAdapter = PasswordsAdapter(
+            onCopyButtonClickListener = {
+                viewModel.onCopyButtonClicked(it)
+            },
+            onDeleteButtonClickListener = {
+                viewModel.onDeleteButtonClicked(it)
+            },
+            onItemClickListener = {
+                viewModel.onItemClicked(it)
+            }
+        )
         binding.passwordsRecycler.adapter = passwordsAdapter
     }
 
@@ -71,6 +80,13 @@ class PasswordsFragment : Fragment() {
                     when (it) {
                         is PasswordsUiEvent.ShowToast -> {
                             Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                        }
+
+                        is PasswordsUiEvent.Navigate -> {
+                            findNavController().navigate(
+                                PasswordsFragmentDirections
+                                    .actionPasswordsFragmentToSavePasswordFragment(it.data)
+                            )
                         }
                     }
                 }

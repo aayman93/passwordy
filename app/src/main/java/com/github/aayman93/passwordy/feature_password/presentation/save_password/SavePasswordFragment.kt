@@ -11,6 +11,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
+import com.github.aayman93.passwordy.R
 import com.github.aayman93.passwordy.databinding.FragmentSavePasswordBinding
 import com.github.aayman93.passwordy.feature_password.presentation.utils.PasswordAction
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,17 +40,18 @@ class SavePasswordFragment : Fragment() {
         initViews()
         initClicks()
         respondToUiEvents()
-        val passwordAction = args.passwordAction
-
-        if (passwordAction is PasswordAction.SavePassword) {
-            binding.passwordField.setText(passwordAction.data)
-        }
     }
 
     private fun initViews() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
         viewModel.setInitialValues(args.passwordAction)
+
+        binding.screenTitle.text = when (args.passwordAction) {
+            PasswordAction.AddPassword -> getString(R.string.add_password)
+            is PasswordAction.EditPassword -> getString(R.string.edit_password)
+            is PasswordAction.SavePassword -> getString(R.string.save_password)
+        }
     }
 
     private fun initClicks() {

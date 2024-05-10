@@ -8,4 +8,6 @@ interface PasswordRepository {
     fun getPasswords(): Flow<List<PasswordInfo>>
 
     suspend fun savePasswordInfo(passwordInfo: PasswordInfo): Long
+
+    suspend fun deletePasswordInfo(passwordInfo: PasswordInfo)
 }

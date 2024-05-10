@@ -17,4 +17,8 @@ class PasswordRepositoryImpl @Inject constructor(
     override suspend fun savePasswordInfo(passwordInfo: PasswordInfo): Long {
         return dao.savePasswordInfo(passwordInfo)
     }
+
+    override suspend fun deletePasswordInfo(passwordInfo: PasswordInfo) {
+        return dao.deletePasswordInfo(passwordInfo)
+    }
 }
