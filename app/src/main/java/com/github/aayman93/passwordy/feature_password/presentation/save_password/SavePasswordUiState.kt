@@ -7,7 +7,7 @@ data class SavePasswordUiState(
     val username: MutableStateFlow<String> = MutableStateFlow(""),
     val phone: MutableStateFlow<String> = MutableStateFlow(""),
     val website: MutableStateFlow<String> = MutableStateFlow(""),
-    var password: MutableStateFlow<String> = MutableStateFlow(""),
+    val password: MutableStateFlow<String> = MutableStateFlow(""),
     
     val id: Int? = null,
 
