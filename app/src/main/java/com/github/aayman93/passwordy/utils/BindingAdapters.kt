@@ -21,8 +21,8 @@ fun setErrorText(view: TextInputLayout, errorMessage: String?) {
 
 @BindingAdapter(value = ["setLogin"])
 fun TextView.setLoginText(passwordInfo: PasswordInfo) {
-    this.text = passwordInfo.email.ifBlank {
-        passwordInfo.username.ifBlank {
+    this.text = passwordInfo.username.ifBlank {
+        passwordInfo.email.ifBlank {
             passwordInfo.phone
         }
     }

@@ -85,8 +85,9 @@ class SavePasswordViewModel @Inject constructor(
                 id = _state.value.id
             )
             val result = savePasswordInfoUseCase(passwordInfo)
+            // Id was used to not create a new entry each time the button is clicked.
             _state.value = _state.value.copy(id = result.toInt())
-            eventChannel.send(SavePasswordUiEvent.ShowToast("Password saved successfully!"))
+            eventChannel.send(SavePasswordUiEvent.PasswordSaved)
         }
     }
 }

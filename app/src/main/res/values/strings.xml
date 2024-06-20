@@ -24,4 +24,5 @@
     <string name="passwords_empty_state_text">You don\'t have any saved passwords!</string>
     <string name="delete_password">Delete password</string>
     <string name="edit_password">Edit Password</string>
+    <string name="password_saved_successfully">Password saved successfully!</string>
 </resources>

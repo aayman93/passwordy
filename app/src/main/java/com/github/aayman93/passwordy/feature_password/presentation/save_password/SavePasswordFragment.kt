@@ -10,11 +10,13 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.github.aayman93.passwordy.R
 import com.github.aayman93.passwordy.databinding.FragmentSavePasswordBinding
 import com.github.aayman93.passwordy.feature_password.presentation.utils.PasswordAction
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -65,8 +67,15 @@ class SavePasswordFragment : Fragment() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.eventFlow.collect {
                     when (it) {
-                        is SavePasswordUiEvent.ShowToast -> {
-                            Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                        is SavePasswordUiEvent.PasswordSaved -> {
+                            Toast.makeText(
+                                requireContext(),
+                                getString(R.string.password_saved_successfully),
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                            delay(300)
+                            findNavController().popBackStack()
                         }
                     }
                 }
